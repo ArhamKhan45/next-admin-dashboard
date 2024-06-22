@@ -1,0 +1,31 @@
+[
+  {
+    "category": "Pages",
+    "items": [
+      {
+        "iconName": "MdDashboard",
+        "title": "Dashboard",
+        "url": "/admin/dashboard"
+      },
+      { "iconName": "FaUsers", "title": "Users", "url": "/admin/users" },
+      { "iconName": "FaBox", "title": "Products", "url": "/admin/products" },
+      { "iconName": "FaDollarSign", "title": "Transactions" }
+    ]
+  },
+  {
+    "category": "Analytics",
+    "items": [
+      { "iconName": "FaBriefcase", "title": "Revenue" },
+      { "iconName": "FaFileAlt", "title": "Reports" },
+      { "iconName": "FaUsersCog", "title": "Teams" }
+    ]
+  },
+  {
+    "category": "User",
+    "items": [
+      { "iconName": "FaCog", "title": "Settings" },
+      { "iconName": "FaQuestionCircle", "title": "Help" },
+      { "iconName": "FaSignOutAlt", "title": "Logout" }
+    ]
+  }
+]

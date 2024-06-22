@@ -19,22 +19,20 @@ const config = {
       },
     },
     extend: {
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+      backgroundColor: {
+        "site-outer": "#141c2c",
+        "site-main": "#192237",
+        "site-light-grey": "#2F374B",
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      colors: {
+        "site-color": "#fff",
+        "site-outer": "#141c2c",
+        "site-main": "#192237",
       },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+      ring: {
+        "site-color": "#fff",
+        "site-outer": "#141c2c",
+        "site-main": "#192237",
       },
     },
   },
