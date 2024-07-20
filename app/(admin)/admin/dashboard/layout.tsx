@@ -10,7 +10,7 @@ const DashboardLayout = ({
 }: dashboardProps) => {
   return (
     <div className="flex w-full">
-      <div className="fixed bg-site-main border w-[300px] min-h-screen ">
+      <div className="fixed bg-site-main  w-[300px] min-h-screen ">
         {LeftMenuPanel}
       </div>
       <div className=" w-[calc(100%-350px)]  flex min-h-screen flex-wrap ms-auto  ">

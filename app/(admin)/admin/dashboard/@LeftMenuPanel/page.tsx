@@ -12,7 +12,7 @@ const LeftMenuPanel = () => {
       {/* icons with title menus */}
       {headerData.map((section, index) => (
         <div key={index}>
-          <h4 className="font-semibold "> {section.category}</h4>
+          <h4 className="font-semibold mb-2"> {section.category}</h4>
           {section.items.map((item, subIndex) => (
             <HeaderItem
               iconName={item?.iconName}

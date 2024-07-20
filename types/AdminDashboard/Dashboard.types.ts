@@ -73,12 +73,19 @@ export type UserDataTableProps = {
 }[];
 
 // Products page types
-
-export type ProductDataTableProps = {
+export type ProductDataProps = {
   id: string;
   title: string;
   description: string;
   price: number;
   createdAt: string;
   stock: number;
-}[];
+};
+export type ProductDataTableProps = {
+  productsData: ProductDataProps[];
+};
+
+// common pages types
+export type AddNewButtonPageProps = {
+  AddNewHandler: () => void;
+};

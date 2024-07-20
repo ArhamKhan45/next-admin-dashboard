@@ -47,7 +47,7 @@ const HeaderItem: React.FC<headerItemProps> = ({ iconName, title, url }) => {
   }, [iconName]);
 
   return (
-    <div className="px-5 py-3 rounded-lg mb-4 hover:bg-site-light-grey">
+    <div className="px-5 py-[8px]  rounded-lg mb-[8px] hover:bg-site-light-grey">
       <Link className="font-medium" href={url ?? ""}>
         {IconComponent && <IconComponent className="me-4 inline-block" />}
         {title}

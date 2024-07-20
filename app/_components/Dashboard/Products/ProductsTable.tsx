@@ -6,12 +6,11 @@ import { Button } from "@/components/ui/button";
 import Pagination from "../common/pagination";
 import { ProductDataTableProps } from "@/types/AdminDashboard/Dashboard.types";
 import AddNew from "../common/AddNew";
+import { useRouter } from "next/navigation";
 
-const ProductsTable: React.FC<{
-  productsData: ProductDataTableProps;
-}> = ({ productsData }) => {
+const ProductsTable: React.FC<ProductDataTableProps> = ({ productsData }) => {
   const [word, setWord] = useState<string | undefined>(undefined);
-
+  const router = useRouter();
   const showProductsData = (
     <>
       {productsData
@@ -62,7 +61,9 @@ const ProductsTable: React.FC<{
         ))}
     </>
   );
-
+  const addNewHandler = () => {
+    router.push("/admin/products/addproduct");
+  };
   return (
     <div className="p-4 ">
       <div className="flex justify-between items-center">
@@ -71,9 +72,9 @@ const ProductsTable: React.FC<{
           myplaceholder="Search for a product"
           handler={setWord}
         />
-        <AddNew />
+        <AddNew AddNewHandler={addNewHandler} />
       </div>
-      {/* table */}
+      {/* table of products*/}
       <div className="mt-4">
         <div className=" mb-4 items-center justify-between font-semibold hidden 2xl:flex">
           <p className="w-[18%] ">Title</p>
