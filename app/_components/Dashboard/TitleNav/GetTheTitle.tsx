@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 interface GetTheTitleProps {
-  title: string;
+  title?: string;
 }
 
 const GetTheTitle: React.FC<GetTheTitleProps> = ({ title }) => {

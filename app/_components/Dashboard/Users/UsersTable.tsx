@@ -6,12 +6,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Pagination from "../common/pagination";
 import { UserDataTableProps } from "@/types/AdminDashboard/Dashboard.types";
+import { useRouter } from "next/navigation";
 
 const UsersTable: React.FC<{ usersData: UserDataTableProps }> = ({
   usersData,
 }) => {
   const [word, setWord] = useState<string | undefined>(undefined);
-
+  const router = useRouter();
   const showUsersData = (
     <>
       {usersData
@@ -63,6 +64,9 @@ const UsersTable: React.FC<{ usersData: UserDataTableProps }> = ({
     </>
   );
 
+  const addNewHandler = () => {
+    router.push("/admin/users/adduser");
+  };
   return (
     <div className="p-4 ">
       <div className="flex justify-between items-center">
@@ -71,7 +75,7 @@ const UsersTable: React.FC<{ usersData: UserDataTableProps }> = ({
           myplaceholder="Search for a user"
           handler={setWord}
         />
-        <AddNewBtn />
+        <AddNewBtn AddNewHandler={addNewHandler} />
       </div>
       {/* table */}
       <div className="mt-4">
